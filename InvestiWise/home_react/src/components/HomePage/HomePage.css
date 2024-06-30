@@ -1,0 +1,276 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    height: 100%;
+    background-color: #F5F5F5; /* Set background to white */
+    overflow: hidden; /* Prevent scrollbar appearance */
+}
+
+/* ====================== Title Position ====================== */
+.inner-header {
+    position: relative;
+    display: flex;
+    flex-direction: column; /* 垂直堆叠子元素 */
+    align-items: center; /* 水平居中 */
+    justify-content: center; /* 垂直居中 */
+    height: 100vh; /* 使用视窗高度，确保整个容器占满屏幕高度 */
+    z-index: 4;
+}
+
+.title-brand-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center; /* 水平居中对齐 */
+    align-items: center; /* 垂直居中对齐 */
+    gap: 10px; /* 标题和品牌之间的间距 */
+}
+
+
+/* ====================== Title style ====================== */
+
+.title {
+    margin-right: 1.5rem;
+    margin-top: -50px; /* 向上移动一点点 */
+    margin-left: -8px; /* 向左移动一点点 */
+    color:  rgb(0, 0, 0); 
+    font-family: 'Times New Roman', sans-serif;
+    line-height: 1.2; /* 维持原有行高 */
+    font-size: 5rem;
+    white-space: nowrap;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    -webkit-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-style: italic;
+
+}
+
+.brand-name {
+    font-size: 7rem;
+    font-family: 'Times New Roman', sans-serif;
+    color: rgb(0, 174, 105);
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px 4px rgba(27, 221, 13, 0.9); /* 阴影颜色与color相同 */
+    -webkit-text-shadow: 2px 2px 4px rgba(39, 167, 0, 0.9);
+    
+}
+
+
+
+.introduce {
+    font-family: 'Times New Roman', sans-serif;
+    font-size:16px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 1.8;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+/* ====================== Stock Ticker Styles ====================== */
+/* Stock Ticker */
+/* 这是股票行情滚动条样式 */
+    .stock-ticker-wrapper {
+        overflow: hidden;
+        white-space: nowrap;    
+        position: absolute;
+        top: 20px; /* Moved to top */
+        width: 100%;
+        z-index: 3;
+        height:38px;
+    }
+
+    .stock-ticker {
+        display: inline-block;
+        animation: ticker-move 30s linear infinite;
+    }
+
+    .stock-ticker-wrapper:hover .stock-ticker {
+        animation-play-state: paused;
+    }
+
+    .stock-item {
+        display: inline-block;
+        margin: 0 10px;
+        padding: 5px 10px;
+        border: 1px solid #ddd;
+        border-radius: 20px;
+        background-color: #fff;
+        font-family: 'Arial', sans-serif;
+        font-size: 1em;
+        transition: transform 0.3s ease;
+        box-shadow: 2px 2px 4px rgba(0.5, 0, 0, 0);
+    }
+
+    .stock-up {
+        color: #4caf50;
+    }
+
+    .stock-down {
+        color: #f44336;
+    }
+
+    .stock-item:hover {
+        transform: scale(0.9);
+    }
+/* ====================== Button Styles ====================== */
+.button:link,
+.button:visited {
+    margin: 10px auto 0;
+    padding: 14px 15px;
+    color: #353434;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    -webkit-text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.btn-hover:link:after,
+.btn-hover:visited:after {
+    content: "";
+    position: absolute;
+    height: 0%;
+    left: 46%;
+    top: 35%;
+    width: 100%;
+    z-index: -1;
+    -webkit-transition: all 0.75s ease 0s;
+    -moz-transition: all 0.75s ease 0s;
+    -o-transition: all 0.75s ease 0s;
+    transition: all 0.75s ease 0s;
+}
+
+.btn-hover:link:hover,
+.btn-hover:visited:hover {
+    color: #FFF;
+    text-shadow: none;
+}
+
+.btn-hover:link:hover:after,
+.btn-hover:visited:hover:after {
+    height: 100%;
+}
+
+.btn-hover:link,
+.btn-hover:visited {
+    position: relative;
+    margin: 10px auto 0;
+    padding: 14px 15px;
+    color: #353434;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    letter-spacing: .08em;
+    -webkit-text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 1px 0 rgba(0, 0, 0, 0.2);
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.btn-hover.btn-fill {
+    border: 2px solid #408d48;
+    border-radius: 10px;
+}
+
+.btn-hover.btn-fill:after {
+    background: #347527;
+    opacity: .5;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.btn-hover.btn-fill:hover:after {
+    height: 100%;
+    opacity: 1;
+
+}
+
+/* .video-btn {
+    background-color: #ffffff; 
+    padding: 10px; 
+    border-radius: 2px;
+    color: black; 
+    transition: background-color 0.3s, color 0.3s; 
+} */
+
+/* .video-btn:hover {
+    background-color: #408d86;
+    color: white; 
+} */
+
+
+/* ====================== Waves Styles ====================== */
+/* 背景波浪动画样式 */
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25vh; /* Adjust height if necessary */
+    z-index: 1;
+}
+.parallax > use {
+    animation: move-forever 25s cubic-bezier(.55,.5,.45,.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+    fill: #008000; /* Green */
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+    fill: #00A550; /* Stock Green */
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+    fill: #00C853; /* Emerald Green */
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+    fill: #66BB6A; /* Medium Green */
+    animation-delay: -5s;
+    animation-duration: 17s;
+}
+
+
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+@keyframes ticker-move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%); /* Ensure the items move completely off screen */
+    }
+}
